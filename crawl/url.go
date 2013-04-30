@@ -13,7 +13,7 @@ type Site struct {
 	Url, Body []byte
 }
 
-const DATA = "url.data"
+const DATA = "data/url.data"
 
 // GetUrl will make an HTTP GET request, build a site object and put it on a channel.
 // It will send a message on the stop channel after the function finishes.
@@ -40,7 +40,6 @@ func SaveData(url string) error {
 
 	file, err := os.Open(DATA)
 	if err != nil {
-
 		return err
 	}
 	//defer file.Close()
