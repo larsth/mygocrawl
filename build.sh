@@ -1,6 +1,16 @@
 #!/bin/sh
 
-cd src
+cd log
+go build
+
+cd ..
+
+
+cd conf
+go build
+cd ..
+
+cd crawl
 
 go build
 
