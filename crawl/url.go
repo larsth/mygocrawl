@@ -57,7 +57,7 @@ func SaveData(url string) error {
 // It manages the number of goroutines using a stop channel.
 // This function does not return and should be used as a goroutine.
 func ThrottledCrawl(curl chan []byte, csite chan Site, death chan string, visited map[string]int) {
-	maxGos := 10
+	maxGos := 100
 	numGos := 0
 	for {
 		if numGos > maxGos {
